@@ -4,13 +4,15 @@
 #include <iostream>
 
 void print_menu(void) {
-    std::cout << "What action do you want to perform on the matrix?" << "\n";
-    std::cout << "1. Finding the determinant of a matrix" << "\n";
-    std::cout << "2. Addition of matrices" << "\n";
-    std::cout << "3. Subtraction of matrices" << "\n";
-    std::cout << "4. Matrix multiplication" << "\n";
-    std::cout << "5. Finding the inverse matrix" << "\n";
-    std::cout << "6. Transpose of a matrix" << "\n";
+    constexpr std::string_view menu = R"(What action do you want to perform on the matrix?
+    1. Finding the determinant of a matrix
+    2. Addition of matrices
+    3. Subtraction of matrices
+    4. Matrix multiplication
+    5. Finding the inverse matrix
+    6. Transpose of a matrix
+    )";
+    std::cout << menu;
 }
 
 void menu(void) {
