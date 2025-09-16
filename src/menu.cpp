@@ -1,4 +1,5 @@
 #include "menu.h"
+#include "calculation.h"
 #include <locale.h>
 #include <iostream>
 
@@ -7,7 +8,9 @@ void print_menu(void) {
     std::cout << "1. Finding the determinant of a matrix" << "\n";
     std::cout << "2. Addition of matrices" << "\n";
     std::cout << "3. Subtraction of matrices" << "\n";
-    std::cout << "4. Transpose of a matrix" << "\n";
+    std::cout << "4. Matrix multiplication" << "\n";
+    std::cout << "5. Finding the inverse matrix" << "\n";
+    std::cout << "6. Transpose of a matrix" << "\n";
 }
 
 void menu(void) {
@@ -19,23 +22,30 @@ void menu(void) {
     std::cin >> operation;
     switch (operation)
     {
-    case 1: // нахождение det
-        std::cout << "in process" << std::endl;
+    // нахождение det
+    case 1: 
+        calculation_matrix(1);
         break;
-    case 2: // сложение матриц
-        std::cout << "in process" << std::endl;
+    // сложение матриц
+    case 2: 
+        calculation_matrix(2);
         break;
-    case 3: // вычитание матриц
-        std::cout << "in process" << std::endl;
+    // вычитание матриц
+    case 3: 
+        calculation_matrix(3);
         break;
-    case 4: // умножение матриц
-        std::cout << "in process" << std::endl;
+    // умножение матриц
+    case 4:
+        calculation_matrix(4);
         break;
-    /*
-    case 5: // находение обратной матрицы
-        
+    // находение обратной матрицы
+    case 5:
+        calculation_matrix(5);
         break;
-    */
+    // транспонирование матрицы
+    case 6:
+        calculation_matrix(6);
+        break;
     default:
         std::cout << "Input error, non-existent command selected" << std::endl;
         goto re_input;
